@@ -14,9 +14,8 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
-    
+
     if request.GET:
-        """view to sort the products"""
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
@@ -30,15 +29,12 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-
-
-        """ view to check the category """
+            
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-        """view to search the queries """
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
