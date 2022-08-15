@@ -48,7 +48,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'boutique_ado.urls'
+ROOT_URLCONF = 'boutique_Ado.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
