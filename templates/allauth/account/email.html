@@ -4,6 +4,11 @@
 
 {% block head_title %}{% trans "E-mail Addresses" %}{% endblock %}
 
+{% block inner_content %}
+    <hr>
+    <h2 class="logo-font mb-4">{% trans "E-mail Addresses" %}</h2>
+    <hr>
+
 {% block content %}
     <h1>{% trans "E-mail Addresses" %}</h1>
 {% if user.emailaddress_set.all %}
